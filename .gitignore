@@ -1,0 +1,23 @@
+
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE files
+.idea/
+
+# Secret credentials
+jsonkey.json
+.env
+*.pem
+*.key
+
+# Other files
+.DS_Store
+
+# Original clickstream records
+data/clickstream_data.json

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="/static/script.js"></script>
+</head>
+
+<body style="font-family:Arial;margin:0;background:#f6f6f6">
+
+<div style="
+    background:#ff5e62;
+    color:white;
+    padding:20px;
+    font-size:22px;
+    font-weight:bold;">
+    🍽 Menu
+</div>
+
+<div id="menu"
+     style="
+     padding:25px;
+     display:grid;
+     grid-template-columns:repeat(4,1fr);
+     gap:15px;">
+</div>
+
+<div style="padding:20px;text-align:center">
+    <a href="/cart">
+        <button class="track-click"
+            style="padding:12px 25px;border-radius:8px;background:#ff5e62;color:white;border:none">
+            Go To Cart
+        </button>
+    </a>
+</div>
+
+<script>
+const items=[
+"Burger","Pizza","Pasta","Fries","Sandwich",
+"Taco","Noodles","Biryani","Paneer","Soup",
+"Salad","Coffee","Tea","Shake","Icecream",
+"Roll","Dosa","Idli","Cake","Juice"
+];
+
+const div=document.getElementById("menu");
+
+items.forEach(i=>{
+    const btn=document.createElement("button");
+    btn.innerText=i+" ₹100";
+    btn.onclick=()=>addToCart(i,100);
+    btn.style.padding="18px";
+    btn.style.borderRadius="10px";
+    btn.style.border="none";
+    btn.style.background="white";
+    btn.style.cursor="pointer";
+    btn.style.fontWeight="bold";
+    div.appendChild(btn);
+});
+</script>
+
+</body>
+</html>
